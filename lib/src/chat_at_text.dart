@@ -1,5 +1,4 @@
 import 'package:extended_text/extended_text.dart';
-import 'package:extended_text_field/extended_text_field.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_openim_widget/flutter_openim_widget.dart';

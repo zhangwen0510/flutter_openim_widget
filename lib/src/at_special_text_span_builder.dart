@@ -1,11 +1,10 @@
-import 'package:extended_text_field/extended_text_field.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_openim_widget/flutter_openim_widget.dart';
 
 typedef AtTextCallback = Function(String showText, String actualText);
 
-class AtSpecialTextSpanBuilder extends SpecialTextSpanBuilder {
+class AtSpecialTextSpanBuilder  {
   final AtTextCallback? atCallback;
 
   /// key:userid
@@ -23,7 +22,7 @@ class AtSpecialTextSpanBuilder extends SpecialTextSpanBuilder {
   TextSpan build(
     String data, {
     TextStyle? textStyle,
-    SpecialTextGestureTapCallback? onTap,
+   // SpecialTextGestureTapCallback? onTap,
   }) {
     StringBuffer buffer = StringBuffer();
     if (kIsWeb) {
@@ -62,25 +61,25 @@ class AtSpecialTextSpanBuilder extends SpecialTextSpanBuilder {
               //   actualText: '$value',
               //   start: m.start,
               // );
-              inlineSpan = SpecialTextSpan(
-                text: '@$name ',
-                actualText: '$value',
-                start: m.start,
-                style: atStyle,
-              );
+              // inlineSpan = SpecialTextSpan(
+              //   text: '@$name ',
+              //   actualText: '$value',
+              //   start: m.start,
+              //   style: atStyle,
+              // );
               buffer.write('@$name ');
             } else {
               inlineSpan = TextSpan(text: '$value', style: textStyle);
               buffer.write('$value');
             }
           } else if (emojiReg.hasMatch(value)) {
-            inlineSpan = ImageSpan(
-              ImageUtil.emojiImage(value),
-              imageWidth: atStyle!.fontSize!,
-              imageHeight: atStyle!.fontSize!,
-              start: m.start,
-              actualText: '$value',
-            );
+            // inlineSpan = ImageSpan(
+            //   ImageUtil.emojiImage(value),
+            //   imageWidth: atStyle!.fontSize!,
+            //   imageHeight: atStyle!.fontSize!,
+            //   start: m.start,
+            //   actualText: '$value',
+            // );
           }
           /*String id = value.replaceAll("@", "").trim();
         if (allAtMap.containsKey(id)) {
@@ -118,13 +117,13 @@ class AtSpecialTextSpanBuilder extends SpecialTextSpanBuilder {
     return TextSpan(children: children, style: textStyle);
   }
 
-  @override
-  SpecialText? createSpecialText(
-    String flag, {
-    TextStyle? textStyle,
-    SpecialTextGestureTapCallback? onTap,
-    required int index,
-  }) {
-    return null;
-  }
+  // @override
+  // SpecialText? createSpecialText(
+  //   String flag, {
+  //   TextStyle? textStyle,
+  //   SpecialTextGestureTapCallback? onTap,
+  //   required int index,
+  // }) {
+  //   return null;
+  // }
 }

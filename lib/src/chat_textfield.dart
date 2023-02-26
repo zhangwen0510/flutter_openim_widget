@@ -1,4 +1,3 @@
-import 'package:extended_text_field/extended_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_openim_widget/flutter_openim_widget.dart';
@@ -30,33 +29,34 @@ class ChatTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ExtendedTextField(
-      style: style,
-      specialTextSpanBuilder: AtSpecialTextSpanBuilder(
-        atCallback: atCallback,
-        allAtMap: allAtMap,
-        atStyle: atStyle,
-      ),
-      focusNode: focusNode,
-      controller: controller,
-      keyboardType: TextInputType.multiline,
-      enabled: enabled,
-      autofocus: false,
-      minLines: 1,
-      maxLines: 4,
-      textInputAction: TextInputAction.newline,
-      // onSubmitted: onSubmitted,
-      decoration: InputDecoration(
-        border: InputBorder.none,
-        isDense: true,
-        // contentPadding: EdgeInsets.zero,
-        contentPadding: EdgeInsets.symmetric(
-          horizontal: 4.w,
-          vertical: 8.h,
-        ),
-      ),
-      inputFormatters: inputFormatters,
-    );
+    return Container();
+    // return ExtendedTextField(
+    //   style: style,
+    //   specialTextSpanBuilder: AtSpecialTextSpanBuilder(
+    //     atCallback: atCallback,
+    //     allAtMap: allAtMap,
+    //     atStyle: atStyle,
+    //   ),
+    //   focusNode: focusNode,
+    //   controller: controller,
+    //   keyboardType: TextInputType.multiline,
+    //   enabled: enabled,
+    //   autofocus: false,
+    //   minLines: 1,
+    //   maxLines: 4,
+    //   textInputAction: TextInputAction.newline,
+    //   // onSubmitted: onSubmitted,
+    //   decoration: InputDecoration(
+    //     border: InputBorder.none,
+    //     isDense: true,
+    //     // contentPadding: EdgeInsets.zero,
+    //     contentPadding: EdgeInsets.symmetric(
+    //       horizontal: 4.w,
+    //       vertical: 8.h,
+    //     ),
+    //   ),
+    //   inputFormatters: inputFormatters,
+    // );
   }
 }
 
