@@ -1,4 +1,3 @@
-import 'package:extended_text/extended_text.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_openim_widget/flutter_openim_widget.dart';
@@ -165,11 +164,11 @@ class ChatAtText extends StatelessWidget {
               inlineSpan = TextSpan(text: matchText, style: style);
             }
           } else if (mapping.type == PatternType.EMOJI) {
-            inlineSpan = ImageSpan(
-              ImageUtil.emojiImage(matchText),
-              imageWidth: style.fontSize! * 1.4,
-              imageHeight: style.fontSize! * 1.4,
-            );
+            // inlineSpan = ImageSpan(
+            //   ImageUtil.emojiImage(matchText),
+            //   imageWidth: style.fontSize! * 1.4,
+            //   imageHeight: style.fontSize! * 1.4,
+            // );
           } else {
             inlineSpan = TextSpan(
               text: matchText,
